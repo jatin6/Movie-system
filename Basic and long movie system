@@ -1,0 +1,43 @@
+'''
+Requirements:
+-List of movies
+-List of theatres
+-List of times
+-Sold out/not sold out
+
+Designing:
+-An array of movies, etc.
+'''
+movies = ["Fast and Furious 9", "No Time To Die", "Bharat", "Dhoom", "Golmaal", "Sooryavanshi"]
+theatres = ["AMC", "Century", "Lowes", "IMAX", "Odeon"]
+times = ["9am", "11am", "12pm", "3pm", "5pm", "7pm", "9pm"]
+soldout = ["Fast and Furious 9", "Dhoom", "Golmaal"]
+
+print ("What do you want to do? ")
+print ("Choices are:")
+print ("1. Show the list of movies")
+print ("2. Show the list of theatres")
+print ("3. Show the list of times")
+print ("4. Show whether the movie is sold out or not")
+
+choice = int(input())
+
+if choice == 1:
+	print ("The list of movies is:")
+	for i in range (0, len(movies)):
+		print (i+1,".",movies[i])
+
+if choice == 2:
+	print ("The list of theatres is:")
+	for i in range (0, len(theatres)):
+		print (i+1, ".",theatres[i])
+		
+if choice == 3:
+	print ("The list of times is:")
+	for i in range (0, len(times)):
+		print (i+1, ".", times[i])
+
+if choice == 4:
+	print ("The list of sold out is:")
+	for i in range (0, len(soldout)):
+		print (i+1,".", soldout[i])
