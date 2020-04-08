@@ -1,0 +1,68 @@
+'''
+Requirements:
+-List of movies
+-List of theatres
+-List of times
+-Sold out/not sold out
+
+Designing:
+-An array of movies, etc.
+
+'''
+movies = ["Fast and Furious 9", "No Time To Die", "Bharat", "Dhoom", "Golmaal", "Sooryavanshi"]
+theatres = ["AMC", "Century", "Lowes", "IMAX", "Odeon"]
+times = ["9am", "11am", "12pm", "3pm", "5pm", "7pm", "9pm"]
+soldout = ["Fast and Furious 9", "Dhoom", "Golmaal"]
+
+def printMenu():
+	print ("\nWhat do you want to do? ")
+	print ("Choices are:")
+	print ("1. Show the list of movies")
+	print ("2. Show the list of theatres")
+	print ("3. Show the list of times")
+	print ("4. Show whether the movie is sold out or not")
+	print ("5. Add a movie to the movie list and print the movie list")
+	print ("6. Add a theatre to the theatre list and print the theatre list")
+	print ("7. Quit")
+	
+def printList(listName):
+	print ("\nThe list is")
+	for i in range (0, len(listName)):
+		print (i+1,".",listName[i])
+
+flag = False
+
+while flag == False:
+	
+	printMenu()
+
+	choice = int(input())
+	
+	if choice == 1:
+		printList(movies)
+	
+	if choice == 2:
+		printList(theatres)
+			
+	if choice == 3:
+		printList(times)
+	
+	if choice == 4:
+		printList(soldOut)
+			
+	if choice == 5:
+		print ("Input the movie name")
+		movieName = input()
+		movies.append(movieName)
+		printList(movies)
+
+	if choice == 6:
+		print ("Input the name of the new theatre")
+		newTheatre = input()
+		theatres.append(newTheatre)
+		printList(theatres)
+	
+	if choice == 7:
+		print ("Quitting")
+		flag = True
+		
